@@ -1,0 +1,61 @@
+﻿
+@model Fregg_Template.Model.Form
+
+@{
+    ViewBag.Title = "Liên hệ với chúng tôi";
+    ViewBag.ListStudents = new List<string> { "Anh Vu" };
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+    ViewBag.active = 4;
+}
+
+
+
+<div class="body_bg layout_padding">
+
+
+    <!-- contact section -->
+
+    <section class="contact_section">
+        <div class="container">
+            <div class="heading_container">
+                <h2>
+                    Let's Get In Touch!
+                </h2>
+            </div>
+        </div>
+        <div class="container contact_bg layout_padding2-top">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="contact_form ">
+                        <form action="">
+                            <input type="text" placeholder="@Model.name">
+                            <input type="email" placeholder="@Model.email">
+                            <input type="text" placeholder="@Model.message" class="message_input">
+                            <button>
+                                Send
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="img-box">
+                        <img src="~/images/contact-img.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- end contact section -->
+
+</div>
+<!-- info section -->
+
+@section BGFooter {
+    <section class="container-fluid footer_section" style="background-color: red">
+        <p>
+            Copyright &copy; 2019 All Rights Reserved By
+            <a href="https://html.design/">Brovu</a>
+        </p>
+    </section>
+}
